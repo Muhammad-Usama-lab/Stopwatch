@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face{
+            src: url('fonts/Montserrat/Montserrat-Light.ttf');
+            font-family: "Montserrat-Light";
+        }
+
+        body{
+            background-color:#487eb0;
+            
+        }
+        .body{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+        h1{
+            display: inline-block;
+            padding:20px;
+            margin: 5px;
+            width: 40px;
+            box-sizing: border-box;
+            font-size: 45px;
+            font-family:'Montserrat-Light';
+            color: #192a56;
+        }
+        h2{
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            font-family:'Montserrat-Light';
+        }
+        .btn{
+            font-size: 17px;
+            font-family:'Montserrat-Light';
+            border: none;
+            padding: 5px 10px;
+            background-color:#40739e;
+            color: white;
+            transition: 0.5s ease;
+            outline: none;
+        }
+        .btn:hover{ 
+            color:#192a56 ;
+            background-color:white;
+            cursor: pointer;
+
+        }
+        .sideLap p{
+            color: white;
+            font-size: 20px;
+            border-left: 2px solid white;
+            padding-left:10px;
+            line-height:1.5em;
+            font-family:'Montserrat-Light';
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        ------Stopwatch------
+    </h2>
+    <div class="body">
+        
+        <h1 id="hour">0</h1>
+        <h1 id="min">0</h1>
+        <h1 id="sec">0</h1>
+        <h1 id="milliSec">0</h1>
+        <br>
+        <button class="btn" onclick="start();">Start</button>
+        <button class="btn" onclick="stop();">Stop</button>
+        <button class="btn" onclick="reset();">Reset</button>
+        <button class="btn" onclick="markLap();">Mark Lap</button>
+    </div>
+    
+    <div class="sideLap">
+        <p id="paragraph">
+            
+        </p>
+    </div>
+
+    
+    
+
+    <script src="stopwatch.js"></script>
+</body>
+
+</html>
